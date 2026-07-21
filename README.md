@@ -108,10 +108,6 @@ Example questions:
 
 ---
 
-## License
-
-MIT — feel free to fork and adapt.
-
 ## Disclaimer
 
 This project is for research and educational purposes only. 
