@@ -1,26 +1,6 @@
 from pathlib import Path
 from bs4 import BeautifulSoup
 
-# PROJECT_ROOT = Path(__file__).resolve().parents[2]
-# DATA_DIR = PROJECT_ROOT / "data"
-# print(DATA_DIR)
-# documents = []
-#
-# for file_path in DATA_DIR.rglob("*.htm"):
-#     print(file_path)
-#     with open(file_path, "r", encoding="utf-8") as file:
-#         html_content = file.read()
-#
-#     soup = BeautifulSoup(html_content, "xml")
-#     text_content = soup.get_text(separator="\n")
-#     print("TITLE:", soup.title)
-#
-#
-#     documents.append({
-#         "file_name": file_path.name,
-#         "content": html_content
-#     })
-
 """Parse SEC 10-K .htm filings into clean, section-aware text."""
 import re
 from bs4 import BeautifulSoup
@@ -108,8 +88,3 @@ def chunk_text(text: str, chunk_size: int, overlap: int):
             overlapped.append(prev_tail + " " + c)
     return overlapped
 
-#
-# PROJECT_ROOT = Path(__file__).resolve().parents[2]
-# file_path = PROJECT_ROOT / "data"
-# content = load_and_clean_htm(file_path)[0]["content"]
-# print(chunk_text(content, 200, 10)[50])
